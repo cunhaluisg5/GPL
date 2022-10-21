@@ -1,0 +1,9 @@
+logo.png: https://www.cartaoideal.com.br/saude
+register_24.png: https://icons.iconarchive.com/icons/hopstarter/button/24/Button-Add-icon.png
+register_32.png: https://icons.iconarchive.com/icons/hopstarter/button/32/Button-Add-icon.png
+logout_24.png: https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/24/logout-icon.png
+logout_32.png: https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/32/logout-icon.png
+about_24.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-help-about-icon.png
+about_32.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-help-about-icon.png
+search_24.png: https://icons.iconarchive.com/icons/ampeross/qetto-2/24/search-icon.png
+search_32.png: https://icons.iconarchive.com/icons/ampeross/qetto-2/32/search-icon.png
