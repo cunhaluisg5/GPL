@@ -149,7 +149,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mbCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbCadastroActionPerformed
-        // TODO add your handling code here:
+        new Cadastro(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_mbCadastroActionPerformed
 
     private void mbPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbPesquisaActionPerformed
