@@ -53,6 +53,7 @@ public class Cadastro extends javax.swing.JDialog {
         tfTelefoneEmpregador.setText("");
         tfEmailEmpregador.setText("");
     }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -1510,6 +1511,11 @@ public class Cadastro extends javax.swing.JDialog {
         btCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check_32.png"))); // NOI18N
         btCadastrar.setText("Cadastrar");
         btCadastrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarActionPerformed(evt);
+            }
+        });
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/erase_32.png"))); // NOI18N
@@ -1647,6 +1653,10 @@ public class Cadastro extends javax.swing.JDialog {
     private void tfEmailEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEmailEmpregadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfEmailEmpregadorActionPerformed
+
+    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
