@@ -7,3 +7,9 @@ about_24.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Act
 about_32.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-help-about-icon.png
 search_24.png: https://icons.iconarchive.com/icons/ampeross/qetto-2/24/search-icon.png
 search_32.png: https://icons.iconarchive.com/icons/ampeross/qetto-2/32/search-icon.png
+exit_24.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-edit-delete-icon.png
+exit_32.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-edit-delete-icon.png
+erase_24.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-trash-empty-icon.png
+erase_32.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-trash-empty-icon.png
+check_24.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-dialog-ok-apply-icon.png
+check_32.png: https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-dialog-ok-apply-icon.png
