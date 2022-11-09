@@ -254,7 +254,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -311,7 +313,9 @@
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
@@ -372,7 +376,9 @@
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
@@ -443,7 +449,9 @@
                             <Property name="selectedIndex" type="int" value="-1"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -500,7 +508,9 @@
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
@@ -561,7 +571,9 @@
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
@@ -626,7 +638,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -739,7 +753,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -800,7 +816,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -861,7 +879,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -922,7 +942,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -1014,7 +1036,9 @@
                             <Property name="selectedIndex" type="int" value="-1"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -1409,10 +1433,10 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel27" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jPanel28" alignment="1" max="32767" attributes="0"/>
                                   <Component id="jPanel25" alignment="1" max="32767" attributes="0"/>
                                   <Component id="jPanel2" max="32767" attributes="0"/>
+                                  <Component id="jPanel27" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -1471,7 +1495,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -1525,6 +1551,19 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="tfSetor">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="18" style="0"/>
+                            </Property>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1573,8 +1612,19 @@
                         </Component>
                         <Component class="javax.swing.JFormattedTextField" name="tfAnoFormacao">
                           <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                               <Format format="####" subtype="-1" type="5"/>
+                            </Property>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="18" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -1624,6 +1674,19 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="tfCargoAtual">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="18" style="0"/>
+                            </Property>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1642,19 +1705,24 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lbSalarioContratual" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="tfSalarioContratual" pref="111" max="32767" attributes="0"/>
+                                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                                  <Component id="tfSalarioContratual" min="-2" pref="113" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfSalarioContratual" alignment="0" pref="34" max="32767" attributes="0"/>
-                                      <Component id="lbSalarioContratual" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          <Component id="tfSalarioContratual" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Component id="lbSalarioContratual" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1670,19 +1738,18 @@
                             <Property name="text" type="java.lang.String" value="Sal&#xe1;rio Contratual:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JFormattedTextField" name="tfSalarioContratual">
+                        <Component class="javax.swing.JTextField" name="tfSalarioContratual">
                           <Properties>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
-                            </Property>
-                            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                              <Format subtype="0" type="4"/>
-                            </Property>
-                            <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="18" style="0"/>
+                            </Property>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
                             </Property>
                           </Properties>
                         </Component>
@@ -1711,11 +1778,11 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfTipoAdmissao" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lbTipoAdmissao" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lbTipoAdmissao" pref="40" max="32767" attributes="0"/>
+                                      <Component id="tfTipoAdmissao" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1731,19 +1798,18 @@
                             <Property name="text" type="java.lang.String" value="Tipo de Admiss&#xe3;o:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JFormattedTextField" name="tfTipoAdmissao">
+                        <Component class="javax.swing.JTextField" name="tfTipoAdmissao">
                           <Properties>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
-                            </Property>
-                            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                              <Format format="###############" subtype="-1" type="5"/>
-                            </Property>
-                            <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="18" style="0"/>
+                            </Property>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
                             </Property>
                           </Properties>
                         </Component>
@@ -1775,7 +1841,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfAnoContratacao" max="32767" attributes="0"/>
+                                      <Component id="tfAnoContratacao" pref="38" max="32767" attributes="0"/>
                                       <Component id="lbAnoContratacao" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1794,11 +1860,19 @@
                         </Component>
                         <Component class="javax.swing.JFormattedTextField" name="tfAnoContratacao">
                           <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
+                              </Border>
+                            </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                               <Format format="####" subtype="-1" type="5"/>
                             </Property>
-                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[22, 22]"/>
+                            <Property name="horizontalAlignment" type="int" value="0"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Tahoma" size="18" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -1933,7 +2007,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -1994,7 +2070,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -2055,7 +2133,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -2116,7 +2196,9 @@
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -2208,7 +2290,9 @@
                             <Property name="selectedIndex" type="int" value="-1"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                           </Properties>
@@ -2387,7 +2471,9 @@
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
+                                <LineBorder>
+                                  <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                                </LineBorder>
                               </Border>
                             </Property>
                             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">

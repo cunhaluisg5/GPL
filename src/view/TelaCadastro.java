@@ -27,6 +27,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
     Cadastro cadastro;
     CadastroController cadastroController;
+    String mensagem;
     
     public TelaCadastro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -77,75 +78,185 @@ public class TelaCadastro extends javax.swing.JDialog {
     private void cadastraObjeto(){
         try {
         
-            Endereco endereco = new Endereco();
+            if(validaCampos()){
+                Endereco endereco = new Endereco();
 
-            endereco.setLogradouro(tfLogradouro.getText());
-            endereco.setNumero(tfNumero.getText());
-            endereco.setBairro(tfBairro.getText());
-            endereco.setCidade(tfCidade.getText());
-            endereco.setUf(cbUf.getSelectedItem().toString());
-            endereco.setComplemento(tfComplemento.getText());
+                endereco.setLogradouro(tfLogradouro.getText());
+                endereco.setNumero(tfNumero.getText());
+                endereco.setBairro(tfBairro.getText());
+                endereco.setCidade(tfCidade.getText());
+                endereco.setUf(cbUf.getSelectedItem().toString());
+                endereco.setComplemento(tfComplemento.getText());
 
-            Contato contato = new Contato();
+                Contato contato = new Contato();
 
-            contato.setTelefone(tfTelefone.getText());
-            contato.setCelular(tfCelular.getText());
-            contato.seteMail(tfEmail.getText());
+                contato.setTelefone(tfTelefone.getText());
+                contato.setCelular(tfCelular.getText());
+                contato.seteMail(tfEmail.getText());
 
 
-            Pessoa pessoa = new Pessoa();
+                Pessoa pessoa = new Pessoa();
 
-            pessoa.setNome(tfNome.getText());
-            pessoa.setDataNascimento(converteData(tfDataNascimento.getText()));
-            pessoa.setCpf(tfCpf.getText());
-            pessoa.setSexo(cbSexo.getSelectedItem().toString());
-            pessoa.setNumeroCarteira(tfNumeroCarteira.getText());
-            pessoa.setCartaoSaude(tfCartaoSaude.getText());
-            pessoa.setRg(tfRg.getText());
+                pessoa.setNome(tfNome.getText());
+                pessoa.setDataNascimento(converteData(tfDataNascimento.getText()));
+                pessoa.setCpf(tfCpf.getText());
+                pessoa.setSexo(cbSexo.getSelectedItem().toString());
+                pessoa.setNumeroCarteira(tfNumeroCarteira.getText());
+                pessoa.setCartaoSaude(tfCartaoSaude.getText());
+                pessoa.setRg(tfRg.getText());
 
-            Endereco enderecoEmpregador = new Endereco();
+                Endereco enderecoEmpregador = new Endereco();
 
-            enderecoEmpregador.setLogradouro(tfLogradouroEmpregador.getText());
-            enderecoEmpregador.setNumero(tfNumeroEmpregador.getText());
-            enderecoEmpregador.setBairro(tfBairroEmpregador.getText());
-            enderecoEmpregador.setCidade(tfCidadeEmpregador.getText());
-            enderecoEmpregador.setUf(cbUfEmpregador.getSelectedItem().toString());
-            enderecoEmpregador.setComplemento(tfComplementoEmpregador.getText());
+                enderecoEmpregador.setLogradouro(tfLogradouroEmpregador.getText());
+                enderecoEmpregador.setNumero(tfNumeroEmpregador.getText());
+                enderecoEmpregador.setBairro(tfBairroEmpregador.getText());
+                enderecoEmpregador.setCidade(tfCidadeEmpregador.getText());
+                enderecoEmpregador.setUf(cbUfEmpregador.getSelectedItem().toString());
+                enderecoEmpregador.setComplemento(tfComplementoEmpregador.getText());
 
-            Contato contatoEmpregador = new Contato();
+                Contato contatoEmpregador = new Contato();
 
-            contatoEmpregador.setTelefone(tfTelefoneEmpregador.getText());
-            contatoEmpregador.setCelular("");
-            contatoEmpregador.seteMail(tfEmailEmpregador.getText());
+                contatoEmpregador.setTelefone(tfTelefoneEmpregador.getText());
+                contatoEmpregador.setCelular("");
+                contatoEmpregador.seteMail(tfEmailEmpregador.getText());
 
-            Empregador empregador = new Empregador();
+                Empregador empregador = new Empregador();
 
-            empregador.setCnpj(tfCnpj.getText());
-            empregador.setEndereco(enderecoEmpregador);
-            empregador.setContato(contatoEmpregador);
+                empregador.setCnpj(tfCnpj.getText());
+                empregador.setEndereco(enderecoEmpregador);
+                empregador.setContato(contatoEmpregador);
 
-            Profissao profissao = new Profissao();
+                Profissao profissao = new Profissao();
 
-            profissao.setProfissao(tfProfissao.getText());
-            profissao.setSetor(tfSetor.getText());
-            profissao.setCargoAtual(tfCargoAtual.getText());
-            profissao.setSalarioContratual(tfSalarioContratual.getText());
-            profissao.setTipoAdmissao(tfTipoAdmissao.getText());
-            profissao.setAnoFormacao(tfAnoFormacao.getText());
-            profissao.setAnoContratacao(tfAnoContratacao.getText());
-            profissao.setEmpregador(empregador);
+                profissao.setProfissao(tfProfissao.getText());
+                profissao.setSetor(tfSetor.getText());
+                profissao.setCargoAtual(tfCargoAtual.getText());
+                profissao.setSalarioContratual(tfSalarioContratual.getText());
+                profissao.setTipoAdmissao(tfTipoAdmissao.getText());
+                profissao.setAnoFormacao(tfAnoFormacao.getText());
+                profissao.setAnoContratacao(tfAnoContratacao.getText());
+                profissao.setEmpregador(empregador);
 
-            cadastro.setContato(contato);
-            cadastro.setEndereco(endereco);
-            cadastro.setPessoa(pessoa);
-            cadastro.setProfissao(profissao);
+                cadastro.setContato(contato);
+                cadastro.setEndereco(endereco);
+                cadastro.setPessoa(pessoa);
+                cadastro.setProfissao(profissao);
 
-            cadastroController.setCadastro(cadastro);
+                cadastroController.setCadastro(cadastro);
 
-            this.exibeMensagem("Cadastro", "Cadastro realizado com sucesso!", 1);
+                this.exibeMensagem("Cadastro", "Cadastro realizado com sucesso!", 1);
+            }else{
+                this.exibeMensagem("Cadastro", mensagem, 2);
+            }
         }catch (Exception error){
             this.exibeMensagem("Cadastro", "Erro ao cadastrar!", 3);
         }
+    }
+    
+    private boolean validaCampos(){        
+        if(tfNome.getText().trim().isEmpty()){
+            mensagem = "Preencha o Nome!";
+            tfNome.setFocusable(true);
+            return false;
+        }else if(tfDataNascimento.getText().replaceAll("/", "").trim().isEmpty()){
+            mensagem = "Preencha a Data de Nascimento!";
+            tfDataNascimento.setFocusable(true);
+            return false;
+        }else if(tfCpf.getText().replaceAll("\\.", "").replaceAll("-", "").trim().isEmpty()){
+            mensagem = "Preencha o CPF!";
+            tfCpf.setFocusable(true);
+            return false;
+        }else if(cbSexo.getSelectedIndex() == -1){
+            mensagem = "Selecione o Sexo!";
+            cbSexo.setFocusable(true);
+            return false;
+        }else if(tfNumeroCarteira.getText().replaceAll("\\.", "").replaceAll("-", "").trim().isEmpty()){
+            mensagem = "Preencha o Número da Carteira!";
+            tfNumeroCarteira.setFocusable(true);
+            return false;
+        }else if(tfCartaoSaude.getText().trim().isEmpty()){
+            mensagem = "Preencha o Cartão de Saúde!";
+            tfCartaoSaude.setFocusable(true);
+            return false;
+        }else if(tfRg.getText().trim().isEmpty()){
+            tfRg.setFocusable(true);
+            mensagem = "Preencha o RG!";
+            return false;
+        }else if(tfLogradouro.getText().trim().isEmpty()){
+            mensagem = "Preencha o Logradouro!";
+            tfLogradouro.setFocusable(true);
+            return false;
+        }else if(tfNumero.getText().trim().isEmpty()){
+            mensagem = "Preencha o Número!";
+            tfNumero.setFocusable(true);
+            return false;
+        }else if(tfBairro.getText().trim().isEmpty()){
+            mensagem = "Preencha o Bairro!";
+            tfBairro.setFocusable(true);
+            return false;
+        }else if(tfCidade.getText().trim().isEmpty()){
+            mensagem = "Preencha a Cidade!";
+            tfCidade.setFocusable(true);
+            return false;
+        }else if(cbUf.getSelectedIndex() == -1){
+            mensagem = "Selecione o Estado!";
+            cbUf.setFocusable(true);
+            return false;
+        }else if(tfProfissao.getText().trim().isEmpty()){
+            mensagem = "Preencha a Profissão!";
+            tfProfissao.setFocusable(true);
+            return false;
+        }else if(tfSetor.getText().trim().isEmpty()){
+            mensagem = "Preencha o Setor!";
+            tfSetor.setFocusable(true);
+            return false;
+        }else if(tfCargoAtual.getText().trim().isEmpty()){
+            mensagem = "Preencha o Cargo Atual!";
+            tfCargoAtual.setFocusable(true);
+            return false;
+        }else if(tfSalarioContratual.getText().trim().isEmpty()){
+            mensagem = "Preencha o Salário Contratual!";
+            tfSalarioContratual.setFocusable(true);
+            return false;
+        }else if(tfTipoAdmissao.getText().trim().isEmpty()){
+            mensagem = "Preencha o Tipo de Admissão!";
+            tfTipoAdmissao.setFocusable(true);
+            return false;
+        }else if(tfAnoFormacao.getText().trim().isEmpty()){
+            mensagem = "Preencha o ano de Formação!";
+            tfAnoFormacao.setFocusable(true);
+            return false;
+        }else if(tfAnoContratacao.getText().trim().isEmpty()){
+            mensagem = "Preencha o Ano de Contratação!";
+            tfAnoContratacao.setFocusable(true);
+            return false;
+        }else if(tfLogradouroEmpregador.getText().trim().isEmpty()){
+            mensagem = "Preencha o Logradouro!";
+            tfLogradouroEmpregador.setFocusable(true);
+            return false;
+        }else if(tfNumeroEmpregador.getText().trim().isEmpty()){
+            mensagem = "Preencha o Número!";
+            tfNumeroEmpregador.setFocusable(true);
+            return false;
+        }else if(tfBairroEmpregador.getText().trim().isEmpty()){
+            mensagem = "Preencha o Bairro!";
+            tfBairroEmpregador.setFocusable(true);
+            return false;
+        }else if(tfCidadeEmpregador.getText().trim().isEmpty()){
+            mensagem = "Preencha a Cidade!";
+            tfCidadeEmpregador.setFocusable(true);
+            return false;
+        }else if(cbUfEmpregador.getSelectedIndex() == -1){
+            mensagem = "Selecione o Estado!";
+            cbUfEmpregador.setFocusable(true);
+            return false;
+        }else if(tfCnpj.getText().replaceAll("\\.", "").replaceAll("/", "").replaceAll("-", "").trim().isEmpty()){
+            mensagem = "Preencha o CNPJ!";
+            tfCnpj.setFocusable(true);
+            return false;
+        }
+        
+        return true;
     }
     
     private Date converteData(String data){
@@ -250,10 +361,10 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfCargoAtual = new javax.swing.JTextField();
         jPanel27 = new javax.swing.JPanel();
         lbSalarioContratual = new javax.swing.JLabel();
-        tfSalarioContratual = new javax.swing.JFormattedTextField();
+        tfSalarioContratual = new javax.swing.JTextField();
         jPanel28 = new javax.swing.JPanel();
         lbTipoAdmissao = new javax.swing.JLabel();
-        tfTipoAdmissao = new javax.swing.JFormattedTextField();
+        tfTipoAdmissao = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         lbAnoContratacao = new javax.swing.JLabel();
         tfAnoContratacao = new javax.swing.JFormattedTextField();
@@ -309,7 +420,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNomeActionPerformed(evt);
@@ -342,7 +453,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbDataNascimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbDataNascimento.setText("Data de Nascimento:");
 
-        tfDataNascimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfDataNascimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -377,7 +488,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbCpf.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbCpf.setText("CPF:");
 
-        tfCpf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfCpf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -415,7 +526,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         cbSexo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         cbSexo.setSelectedIndex(-1);
-        cbSexo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cbSexo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -443,7 +554,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbNumeroCarteira.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbNumeroCarteira.setText("Número da Carteira:");
 
-        tfNumeroCarteira.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfNumeroCarteira.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfNumeroCarteira.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####.####.########-#")));
         } catch (java.text.ParseException ex) {
@@ -478,7 +589,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbCartaoSaude.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbCartaoSaude.setText("Cartão Nacional de Saúde:");
 
-        tfCartaoSaude.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfCartaoSaude.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfCartaoSaude.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###############")));
         } catch (java.text.ParseException ex) {
@@ -515,7 +626,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfRg.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfRg.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfRg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfRg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -587,7 +698,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfLogradouro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfLogradouro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfLogradouro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfLogradouro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfLogradouro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfLogradouroActionPerformed(evt);
@@ -622,7 +733,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfNumero.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNumero.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfNumero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfNumero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfNumero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumeroActionPerformed(evt);
@@ -657,7 +768,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfBairro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfBairro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfBairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfBairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfBairroActionPerformed(evt);
@@ -692,7 +803,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfCidade.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfCidade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfCidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfCidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCidadeActionPerformed(evt);
@@ -728,7 +839,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         cbUf.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cbUf.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
         cbUf.setSelectedIndex(-1);
-        cbUf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cbUf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -990,7 +1101,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfProfissao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfProfissao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfProfissao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfProfissao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfProfissao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfProfissaoActionPerformed(evt);
@@ -1023,6 +1134,10 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbSetor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbSetor.setText("Setor:");
 
+        tfSetor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfSetor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfSetor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -1049,11 +1164,14 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbAnoFormacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbAnoFormacao.setText("Ano de Formação:");
 
+        tfAnoFormacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfAnoFormacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        tfAnoFormacao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfAnoFormacao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -1081,6 +1199,10 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbCargoAtual.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbCargoAtual.setText("Cargo Atual:");
 
+        tfCargoAtual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfCargoAtual.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfCargoAtual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
@@ -1107,10 +1229,9 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbSalarioContratual.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbSalarioContratual.setText("Salário Contratual:");
 
-        tfSalarioContratual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tfSalarioContratual.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
-        tfSalarioContratual.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfSalarioContratual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfSalarioContratual.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfSalarioContratual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1119,17 +1240,20 @@ public class TelaCadastro extends javax.swing.JDialog {
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbSalarioContratual)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfSalarioContratual, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(tfSalarioContratual, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(jPanel27Layout.createSequentialGroup()
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfSalarioContratual, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(lbSalarioContratual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(tfSalarioContratual))
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lbSalarioContratual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1138,14 +1262,9 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbTipoAdmissao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbTipoAdmissao.setText("Tipo de Admissão:");
 
-        tfTipoAdmissao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        try {
-            tfTipoAdmissao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###############")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        tfTipoAdmissao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfTipoAdmissao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfTipoAdmissao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfTipoAdmissao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1160,11 +1279,11 @@ public class TelaCadastro extends javax.swing.JDialog {
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfTipoAdmissao)
-                    .addComponent(lbTipoAdmissao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbTipoAdmissao, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(tfTipoAdmissao))
                 .addContainerGap())
         );
 
@@ -1173,12 +1292,14 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbAnoContratacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbAnoContratacao.setText("Ano de Contratação:");
 
+        tfAnoContratacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfAnoContratacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        tfAnoContratacao.setPreferredSize(new java.awt.Dimension(22, 22));
+        tfAnoContratacao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfAnoContratacao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1196,7 +1317,7 @@ public class TelaCadastro extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAnoContratacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tfAnoContratacao, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                     .addComponent(lbAnoContratacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1234,10 +1355,10 @@ public class TelaCadastro extends javax.swing.JDialog {
                     .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1250,7 +1371,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfLogradouroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfLogradouroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfLogradouroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfLogradouroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfLogradouroEmpregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfLogradouroEmpregadorActionPerformed(evt);
@@ -1285,7 +1406,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfNumeroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNumeroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfNumeroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfNumeroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfNumeroEmpregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumeroEmpregadorActionPerformed(evt);
@@ -1320,7 +1441,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfBairroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfBairroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfBairroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfBairroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfBairroEmpregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfBairroEmpregadorActionPerformed(evt);
@@ -1355,7 +1476,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
         tfCidadeEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfCidadeEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tfCidadeEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfCidadeEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         tfCidadeEmpregador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCidadeEmpregadorActionPerformed(evt);
@@ -1391,7 +1512,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         cbUfEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cbUfEmpregador.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
         cbUfEmpregador.setSelectedIndex(-1);
-        cbUfEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cbUfEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1489,7 +1610,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         lbCnpj.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbCnpj.setText("CNPJ:");
 
-        tfCnpj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tfCnpj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
         try {
             tfCnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
         } catch (java.text.ParseException ex) {
@@ -1926,10 +2047,10 @@ public class TelaCadastro extends javax.swing.JDialog {
     private javax.swing.JTextField tfNumeroEmpregador;
     private javax.swing.JTextField tfProfissao;
     private javax.swing.JTextField tfRg;
-    private javax.swing.JFormattedTextField tfSalarioContratual;
+    private javax.swing.JTextField tfSalarioContratual;
     private javax.swing.JTextField tfSetor;
     private javax.swing.JFormattedTextField tfTelefone;
     private javax.swing.JFormattedTextField tfTelefoneEmpregador;
-    private javax.swing.JFormattedTextField tfTipoAdmissao;
+    private javax.swing.JTextField tfTipoAdmissao;
     // End of variables declaration//GEN-END:variables
 }
