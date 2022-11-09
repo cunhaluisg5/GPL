@@ -17,8 +17,10 @@ public class Profissao {
     private String tipoAdmissao;
     private String anoFormacao;
     private String anoContratacao;
+    private Empregador empregador;
 
     public Profissao() {
+        empregador = new Empregador();
     }
 
     public String getProfissao() {
@@ -75,5 +77,13 @@ public class Profissao {
 
     public void setAnoContratacao(String anoContratacao) {
         this.anoContratacao = anoContratacao;
+    }
+
+    public Empregador getEmpregador() {
+        return empregador;
+    }
+
+    public void setEmpregador(Empregador empregador) {
+        this.empregador = empregador;
     }
 }

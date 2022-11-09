@@ -21,9 +21,10 @@ public class Pessoa {
     private String rg;
     private Endereco endereco;
     private Contato contato;
-    private Profissao profissao;
 
     public Pessoa() {
+        endereco = new Endereco();
+        contato = new Contato();
     }
 
     public String getNome() {
@@ -96,13 +97,5 @@ public class Pessoa {
 
     public void setContato(Contato contato) {
         this.contato = contato;
-    }
-
-    public Profissao getProfissao() {
-        return profissao;
-    }
-
-    public void setProfissao(Profissao profissao) {
-        this.profissao = profissao;
     }
 }

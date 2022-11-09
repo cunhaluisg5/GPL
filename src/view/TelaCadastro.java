@@ -5,18 +5,33 @@
  */
 package view;
 
+import controller.CadastroController;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import model.Contato;
+import model.Empregador;
+import model.Endereco;
+import model.Pessoa;
+import model.Profissao;
+import model.Cadastro;
+
 /**
  *
  * @author luisg
  */
-public class Cadastro extends javax.swing.JDialog {
+public class TelaCadastro extends javax.swing.JDialog {
 
-    /**
-     * Creates new form Cadastro
-     */
-    public Cadastro(java.awt.Frame parent, boolean modal) {
+    Cadastro cadastro;
+    CadastroController cadastroController;
+    
+    public TelaCadastro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        inicializaObjetos();
     }
 
     private void limpaCampos(){
@@ -52,6 +67,113 @@ public class Cadastro extends javax.swing.JDialog {
         tfCnpj.setText("");
         tfTelefoneEmpregador.setText("");
         tfEmailEmpregador.setText("");
+    }
+    
+    private void inicializaObjetos(){
+        cadastro = new Cadastro();
+        cadastroController = new CadastroController();
+    }
+    
+    private void cadastraObjeto(){
+        try {
+        
+            Endereco endereco = new Endereco();
+
+            endereco.setLogradouro(tfLogradouro.getText());
+            endereco.setNumero(tfNumero.getText());
+            endereco.setBairro(tfBairro.getText());
+            endereco.setCidade(tfCidade.getText());
+            endereco.setUf(cbUf.getSelectedItem().toString());
+            endereco.setComplemento(tfComplemento.getText());
+
+            Contato contato = new Contato();
+
+            contato.setTelefone(tfTelefone.getText());
+            contato.setCelular(tfCelular.getText());
+            contato.seteMail(tfEmail.getText());
+
+
+            Pessoa pessoa = new Pessoa();
+
+            pessoa.setNome(tfNome.getText());
+            pessoa.setDataNascimento(converteData(tfDataNascimento.getText()));
+            pessoa.setCpf(tfCpf.getText());
+            pessoa.setSexo(cbSexo.getSelectedItem().toString());
+            pessoa.setNumeroCarteira(tfNumeroCarteira.getText());
+            pessoa.setCartaoSaude(tfCartaoSaude.getText());
+            pessoa.setRg(tfRg.getText());
+
+            Endereco enderecoEmpregador = new Endereco();
+
+            enderecoEmpregador.setLogradouro(tfLogradouroEmpregador.getText());
+            enderecoEmpregador.setNumero(tfNumeroEmpregador.getText());
+            enderecoEmpregador.setBairro(tfBairroEmpregador.getText());
+            enderecoEmpregador.setCidade(tfCidadeEmpregador.getText());
+            enderecoEmpregador.setUf(cbUfEmpregador.getSelectedItem().toString());
+            enderecoEmpregador.setComplemento(tfComplementoEmpregador.getText());
+
+            Contato contatoEmpregador = new Contato();
+
+            contatoEmpregador.setTelefone(tfTelefoneEmpregador.getText());
+            contatoEmpregador.setCelular("");
+            contatoEmpregador.seteMail(tfEmailEmpregador.getText());
+
+            Empregador empregador = new Empregador();
+
+            empregador.setCnpj(tfCnpj.getText());
+            empregador.setEndereco(enderecoEmpregador);
+            empregador.setContato(contatoEmpregador);
+
+            Profissao profissao = new Profissao();
+
+            profissao.setProfissao(tfProfissao.getText());
+            profissao.setSetor(tfSetor.getText());
+            profissao.setCargoAtual(tfCargoAtual.getText());
+            profissao.setSalarioContratual(tfSalarioContratual.getText());
+            profissao.setTipoAdmissao(tfTipoAdmissao.getText());
+            profissao.setAnoFormacao(tfAnoFormacao.getText());
+            profissao.setAnoContratacao(tfAnoContratacao.getText());
+            profissao.setEmpregador(empregador);
+
+            cadastro.setContato(contato);
+            cadastro.setEndereco(endereco);
+            cadastro.setPessoa(pessoa);
+            cadastro.setProfissao(profissao);
+
+            cadastroController.setCadastro(cadastro);
+
+            this.exibeMensagem("Cadastro", "Cadastro realizado com sucesso!", 1);
+        }catch (Exception error){
+            this.exibeMensagem("Cadastro", "Erro ao cadastrar!", 3);
+        }
+    }
+    
+    private Date converteData(String data){
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataFormatada = new Date();
+        try {
+            dataFormatada = formatador.parse(data);
+        } catch (ParseException ex) {
+            Logger.getLogger(TelaCadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return dataFormatada;
+    }
+    
+    private void exibeMensagem(String cabecalho, String mensagem, Integer tipo){
+        switch(tipo){
+            case 1:
+                JOptionPane.showMessageDialog(null, mensagem, cabecalho, 
+                        JOptionPane.INFORMATION_MESSAGE);
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, mensagem, cabecalho, 
+                        JOptionPane.WARNING_MESSAGE);
+                break;
+            case 3:
+                JOptionPane.showMessageDialog(null, mensagem, cabecalho, 
+                        JOptionPane.ERROR_MESSAGE);
+                break;
+        }
     }
     
     @SuppressWarnings("unchecked")
@@ -1655,7 +1777,7 @@ public class Cadastro extends javax.swing.JDialog {
     }//GEN-LAST:event_tfEmailEmpregadorActionPerformed
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
-        // TODO add your handling code here:
+        this.cadastraObjeto();
     }//GEN-LAST:event_btCadastrarActionPerformed
 
     /**
@@ -1688,7 +1810,7 @@ public class Cadastro extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Cadastro dialog = new Cadastro(new javax.swing.JFrame(), true);
+                TelaCadastro dialog = new TelaCadastro(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

@@ -9,12 +9,12 @@ package view;
  *
  * @author luisg
  */
-public class Principal extends javax.swing.JFrame {
+public class TelaPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public TelaPrincipal() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
     }
@@ -149,7 +149,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mbCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbCadastroActionPerformed
-        new Cadastro(this, rootPaneCheckingEnabled).setVisible(true);
+        new TelaCadastro(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_mbCadastroActionPerformed
 
     private void mbPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbPesquisaActionPerformed
@@ -177,20 +177,21 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new TelaPrincipal().setVisible(true);
             }
         });
     }
