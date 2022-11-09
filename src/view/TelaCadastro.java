@@ -76,8 +76,7 @@ public class TelaCadastro extends javax.swing.JDialog {
     }
     
     private void cadastraObjeto(){
-        try {
-        
+        try {        
             if(validaCampos()){
                 Endereco endereco = new Endereco();
 
