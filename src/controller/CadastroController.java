@@ -5,6 +5,8 @@
  */
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import model.Cadastro;
 import model.Contato;
 import model.Endereco;
@@ -17,8 +19,10 @@ import model.Profissao;
  */
 public class CadastroController {
     Cadastro cadastro;
+    List<Cadastro> listaCadastros;
 
     public CadastroController() {
+        this.listaCadastros = new ArrayList<>();
     }
 
     public CadastroController(Pessoa pessoa, Endereco endereco, Contato contato, Profissao profissao) {
@@ -31,5 +35,17 @@ public class CadastroController {
 
     public void setCadastro(Cadastro cadastro) {
         this.cadastro = cadastro;
+    }
+
+    public List<Cadastro> getListaCadastros() {
+        return listaCadastros;
+    }
+
+    public void setListaCadastros(List<Cadastro> listaCadastros) {
+        this.listaCadastros = listaCadastros;
+    }
+    
+    public void addLista(){
+        this.listaCadastros.add(this.cadastro);
     }
 }

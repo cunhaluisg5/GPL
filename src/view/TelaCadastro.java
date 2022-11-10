@@ -5,7 +5,6 @@
  */
 package view;
 
-import controller.CadastroController;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,13 +25,12 @@ import model.Cadastro;
 public class TelaCadastro extends javax.swing.JDialog {
 
     Cadastro cadastro;
-    CadastroController cadastroController;
     String mensagem;
     
     public TelaCadastro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        inicializaObjetos();
+        cadastro = new Cadastro();
     }
 
     private void limpaCampos(){
@@ -68,11 +66,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfCnpj.setText("");
         tfTelefoneEmpregador.setText("");
         tfEmailEmpregador.setText("");
-    }
-    
-    private void inicializaObjetos(){
-        cadastro = new Cadastro();
-        cadastroController = new CadastroController();
     }
     
     private void cadastraObjeto(){
@@ -140,9 +133,11 @@ public class TelaCadastro extends javax.swing.JDialog {
                 cadastro.setEndereco(endereco);
                 cadastro.setPessoa(pessoa);
                 cadastro.setProfissao(profissao);
-
-                cadastroController.setCadastro(cadastro);
-
+                
+                TelaPrincipal.cadastroController.setCadastro(cadastro);
+                
+                TelaPrincipal.cadastroController.addLista();
+                
                 this.exibeMensagem("Cadastro", "Cadastro realizado com sucesso!", 1);
             }else{
                 this.exibeMensagem("Cadastro", mensagem, 2);
@@ -286,6 +281,86 @@ public class TelaCadastro extends javax.swing.JDialog {
         }
     }
     
+    private void cadastraAutomaticamente(){
+        try {       
+            Integer contador = TelaPrincipal.contador;
+            Endereco endereco = new Endereco();
+
+            endereco.setLogradouro(contador.toString());
+            endereco.setNumero(contador.toString());
+            endereco.setBairro(contador.toString());
+            endereco.setCidade(contador.toString());
+            endereco.setUf("MG");
+            endereco.setComplemento(contador.toString());
+
+            Contato contato = new Contato();
+
+            contato.setTelefone("(00)0000-00");
+            contato.setCelular("(00)00000-0000");
+            contato.seteMail(contador.toString());
+
+
+            Pessoa pessoa = new Pessoa();
+
+            pessoa.setNome(contador.toString());
+            pessoa.setDataNascimento(new Date());
+            pessoa.setCpf("000.000.000-00");
+            pessoa.setSexo((contador % 2 == 0) ? "Masculino" : "Feminino");
+            pessoa.setNumeroCarteira("0000.0000.00000000-0");
+            pessoa.setCartaoSaude("000000000000000");
+            pessoa.setRg(contador.toString());
+
+            Endereco enderecoEmpregador = new Endereco();
+
+            enderecoEmpregador.setLogradouro(contador.toString());
+            enderecoEmpregador.setNumero(contador.toString());
+            enderecoEmpregador.setBairro(contador.toString());
+            enderecoEmpregador.setCidade(contador.toString());
+            enderecoEmpregador.setUf("SP");
+            enderecoEmpregador.setComplemento(contador.toString());
+
+            Contato contatoEmpregador = new Contato();
+
+            contatoEmpregador.setTelefone("(00)0000-0000");
+            contatoEmpregador.setCelular("(00)00000-0000");
+            contatoEmpregador.seteMail(contador.toString());
+
+            Empregador empregador = new Empregador();
+
+            empregador.setCnpj("00.000.000/0000-00");
+            empregador.setEndereco(enderecoEmpregador);
+            empregador.setContato(contatoEmpregador);
+
+            Profissao profissao = new Profissao();
+
+            profissao.setProfissao(contador.toString());
+            profissao.setSetor(contador.toString());
+            profissao.setCargoAtual(contador.toString());
+            profissao.setSalarioContratual(contador.toString());
+            profissao.setTipoAdmissao(contador.toString());
+            profissao.setAnoFormacao("0000");
+            profissao.setAnoContratacao("0000");
+            profissao.setEmpregador(empregador);
+
+            cadastro.setContato(contato);
+            cadastro.setEndereco(endereco);
+            cadastro.setPessoa(pessoa);
+            cadastro.setProfissao(profissao);
+
+            TelaPrincipal.cadastroController.setCadastro(cadastro);
+
+            TelaPrincipal.cadastroController.addLista();
+            
+            this.cadastro = new Cadastro();
+                        
+            TelaPrincipal.contador++;
+
+            this.exibeMensagem("Cadastro", "Cadastro realizado com sucesso!", 1);
+        }catch (Exception error){
+            this.exibeMensagem("Cadastro", "Erro ao cadastrar!", 3);
+        }
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -398,6 +473,7 @@ public class TelaCadastro extends javax.swing.JDialog {
         btCadastrar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSair = new javax.swing.JButton();
+        btCadastrar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro");
@@ -1785,6 +1861,16 @@ public class TelaCadastro extends javax.swing.JDialog {
             }
         });
 
+        btCadastrar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btCadastrar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check_32.png"))); // NOI18N
+        btCadastrar1.setText("Cadastrar Automaticamente");
+        btCadastrar1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCadastrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1800,6 +1886,8 @@ public class TelaCadastro extends javax.swing.JDialog {
                         .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btCadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35))))
@@ -1813,7 +1901,8 @@ public class TelaCadastro extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btCadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1900,6 +1989,10 @@ public class TelaCadastro extends javax.swing.JDialog {
         this.cadastraObjeto();
     }//GEN-LAST:event_btCadastrarActionPerformed
 
+    private void btCadastrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrar1ActionPerformed
+        this.cadastraAutomaticamente();
+    }//GEN-LAST:event_btCadastrar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1944,6 +2037,7 @@ public class TelaCadastro extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
+    private javax.swing.JButton btCadastrar1;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btSair;
     private javax.swing.JComboBox<String> cbSexo;

@@ -5,18 +5,22 @@
  */
 package view;
 
+import controller.CadastroController;
+
 /**
  *
  * @author luisg
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
+    public static CadastroController cadastroController;
+    public static Integer contador;
+    
     public TelaPrincipal() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
+        cadastroController = new CadastroController();
+        contador = 1;
     }
 
     /**
@@ -43,7 +47,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GPL");
         setBackground(new java.awt.Color(0, 153, 0));
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
 
@@ -144,7 +147,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(755, 443));
+        setSize(new java.awt.Dimension(773, 490));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -153,7 +156,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_mbCadastroActionPerformed
 
     private void mbPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbPesquisaActionPerformed
-        // TODO add your handling code here:
+        new TelaPesquisa(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_mbPesquisaActionPerformed
 
     private void mbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbSairActionPerformed
