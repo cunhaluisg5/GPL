@@ -48,6 +48,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GPL");
         setBackground(new java.awt.Color(0, 153, 0));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
 
@@ -153,7 +154,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(773, 490));
+        setSize(new java.awt.Dimension(755, 443));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
