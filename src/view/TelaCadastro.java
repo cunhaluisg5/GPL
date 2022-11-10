@@ -496,11 +496,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNomeActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -774,11 +769,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfLogradouro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfLogradouro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfLogradouro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfLogradouro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfLogradouroActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -809,11 +799,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfNumero.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNumero.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfNumero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfNumero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNumeroActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -844,11 +829,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfBairro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfBairro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfBairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfBairro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfBairroActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -879,11 +859,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfCidade.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfCidade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfCidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfCidade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfCidadeActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -945,11 +920,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfComplemento.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfComplemento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfComplemento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tfComplemento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfComplementoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -1087,11 +1057,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfEmail.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfEmail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tfEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfEmailActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
@@ -1177,11 +1142,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfProfissao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfProfissao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfProfissao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfProfissao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfProfissaoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1447,11 +1407,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfLogradouroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfLogradouroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfLogradouroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfLogradouroEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfLogradouroEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -1482,11 +1437,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfNumeroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfNumeroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfNumeroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfNumeroEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNumeroEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -1517,11 +1467,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfBairroEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfBairroEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfBairroEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfBairroEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfBairroEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -1552,11 +1497,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfCidadeEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfCidadeEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfCidadeEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
-        tfCidadeEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfCidadeEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -1618,11 +1558,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfComplementoEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfComplementoEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfComplementoEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tfComplementoEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfComplementoEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -1653,11 +1588,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         tfEmailEmpregador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfEmailEmpregador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfEmailEmpregador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tfEmailEmpregador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfEmailEmpregadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -1921,34 +1851,6 @@ public class TelaCadastro extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNomeActionPerformed
-
-    private void tfLogradouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLogradouroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfLogradouroActionPerformed
-
-    private void tfNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNumeroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNumeroActionPerformed
-
-    private void tfBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBairroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfBairroActionPerformed
-
-    private void tfCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCidadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfCidadeActionPerformed
-
-    private void tfComplementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfComplementoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfComplementoActionPerformed
-
-    private void tfEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfEmailActionPerformed
-
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         this.limpaCampos();
     }//GEN-LAST:event_btLimparActionPerformed
@@ -1956,34 +1858,6 @@ public class TelaCadastro extends javax.swing.JDialog {
     private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
         this.dispose();
     }//GEN-LAST:event_btSairActionPerformed
-
-    private void tfProfissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfProfissaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfProfissaoActionPerformed
-
-    private void tfLogradouroEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLogradouroEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfLogradouroEmpregadorActionPerformed
-
-    private void tfNumeroEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNumeroEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNumeroEmpregadorActionPerformed
-
-    private void tfBairroEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBairroEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfBairroEmpregadorActionPerformed
-
-    private void tfCidadeEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCidadeEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfCidadeEmpregadorActionPerformed
-
-    private void tfComplementoEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfComplementoEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfComplementoEmpregadorActionPerformed
-
-    private void tfEmailEmpregadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEmailEmpregadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfEmailEmpregadorActionPerformed
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         this.cadastraObjeto();

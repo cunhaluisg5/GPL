@@ -6,6 +6,7 @@
 package view;
 
 import controller.CadastroController;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -96,6 +97,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mbSobre.setMaximumSize(new java.awt.Dimension(125, 45));
         mbSobre.setMinimumSize(new java.awt.Dimension(125, 45));
         mbSobre.setPreferredSize(new java.awt.Dimension(125, 45));
+        mbSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mbSobreActionPerformed(evt);
+            }
+        });
         tbMenu.add(mbSobre);
         tbMenu.add(jSeparator3);
 
@@ -162,6 +168,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void mbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbSairActionPerformed
         System.exit(WIDTH);
     }//GEN-LAST:event_mbSairActionPerformed
+
+    private void mbSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbSobreActionPerformed
+        JOptionPane.showMessageDialog(null, "Programa criado para teste Java Swing!", "Programa Teste", 
+                        JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_mbSobreActionPerformed
 
     /**
      * @param args the command line arguments
